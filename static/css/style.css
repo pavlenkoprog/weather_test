@@ -1,0 +1,143 @@
+body {
+    background-color: #f5f6fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+    position: relative;
+}
+
+.suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestion:hover {
+    background-color: #f8f9fa;
+}
+
+.weather-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 15px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.weather-card {
+    flex: 0 0 auto;
+    width: 150px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.weather-card .time {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 10px;
+}
+
+.weather-card .temperature {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0984e3;
+    margin-bottom: 10px;
+}
+
+.weather-card .description {
+    color: #636e72;
+    margin-bottom: 10px;
+}
+
+.weather-card .precipitation {
+    font-size: 0.9em;
+    color: #74b9ff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-item {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city-name {
+    font-weight: 500;
+    color: #2d3436;
+}
+
+.search-count {
+    color: #636e72;
+    font-size: 0.9em;
+}
+
+.last-search {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.last-search a {
+    color: #0984e3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.last-search a:hover {
+    text-decoration: underline;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} 
